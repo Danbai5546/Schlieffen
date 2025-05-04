@@ -1,7 +1,7 @@
 # Schlieffen
 A turn-based strategy game demo developed with Godot, simulating asymmetric warfare with hidden information mechanics.
 
-This project is developed using the Godot 4.3 engine. If you want to view the source code, the complete game script is stored here for reference. Please use the corresponding version of the Godot engine to complete the testing
+This project is developed using the Godot 4.3 engine. If you want to view the source code, the complete game script is stored here for reference. Please use the corresponding version of the Godot engine to complete the testing.
 
 The detailed rules of the game are as follows:
 
