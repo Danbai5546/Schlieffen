@@ -1,0 +1,36 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cucd4trjh23t8"]
+
+[ext_resource type="Shader" path="res://assets/hightlight_block.gdshader" id="1_5m0wq"]
+[ext_resource type="Texture2D" uid="uid://dxp57c8nlkrec" path="res://assets/images/hex.png" id="1_eavfh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5d6dl"]
+shader = ExtResource("1_5m0wq")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qk17r"]
+shader = ExtResource("1_5m0wq")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yfygu"]
+shader = ExtResource("1_5m0wq")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_favrx"]
+texture = ExtResource("1_eavfh")
+texture_region_size = Vector2i(330, 330)
+0:0/next_alternative_id = 7
+0:0/0 = 0
+0:0/2 = 2
+0:0/2/modulate = Color(1, 0.474486, 0.323305, 1)
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_5d6dl")
+0:0/3 = 3
+0:0/3/modulate = Color(1, 0.47451, 0.321569, 1)
+0:0/3/material = SubResource("ShaderMaterial_qk17r")
+0:0/4 = 4
+0:0/4/modulate = Color(0.700318, 0.88174, 0.643429, 1)
+0:0/5 = 5
+0:0/5/modulate = Color(0.701961, 0.882353, 0.643137, 1)
+0:0/5/material = SubResource("ShaderMaterial_yfygu")
+
+[resource]
+tile_shape = 3
+tile_size = Vector2i(262, 300)
+sources/0 = SubResource("TileSetAtlasSource_favrx")

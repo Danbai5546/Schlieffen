@@ -1,0 +1,208 @@
+[gd_scene load_steps=3 format=3 uid="uid://nkwp22idlb4h"]
+
+[ext_resource type="Script" path="res://scenes/title/title.gd" id="1_spiid"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osspc"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.786347, 0.786347, 0.786347, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.0911214, 0.0911215, 0.0911214, 1)
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_spiid")
+
+[node name="GameModeSelection" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.5
+offset_top = -52.0
+offset_right = 96.5
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="SinglePlayer" type="Button" parent="GameModeSelection"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Single Player"
+
+[node name="MultiPlayer" type="Button" parent="GameModeSelection"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Multi Player"
+
+[node name="MultiplayerPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -72.0
+offset_right = 186.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_osspc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MultiplayerPanel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="MultiplayerPanel/VBoxContainer"]
+layout_mode = 2
+text = "Multi Player"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MultiplayerPanel/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="MultiplayerPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "IP:"
+
+[node name="IPLineEdit" type="LineEdit" parent="MultiplayerPanel/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "127.0.0.1"
+placeholder_text = "Only client(Allies) needs."
+
+[node name="Port" type="Label" parent="MultiplayerPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Port: "
+
+[node name="PortLineEdit" type="LineEdit" parent="MultiplayerPanel/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "8081"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MultiplayerPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="Host" type="Button" parent="MultiplayerPanel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Host(German)"
+
+[node name="Client" type="Button" parent="MultiplayerPanel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Client(Allies)"
+
+[node name="BackBtn1" type="Button" parent="MultiplayerPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back"
+
+[node name="SingleplayerPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -72.0
+offset_right = 186.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_osspc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SingleplayerPanel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="SingleplayerPanel/VBoxContainer"]
+layout_mode = 2
+text = "Single Player"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SingleplayerPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="German" type="Button" parent="SingleplayerPanel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start as German"
+
+[node name="Allies" type="Button" parent="SingleplayerPanel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start as Allies"
+
+[node name="BackBtn2" type="Button" parent="SingleplayerPanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back"
+
+[node name="ConnectingLabel" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -21.0
+offset_right = 94.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+text = "Connecting..."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = 188.0
+offset_right = 81.5
+offset_bottom = 296.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="ViewRules" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "View Rules"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit"

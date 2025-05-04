@@ -1,0 +1,419 @@
+[gd_scene load_steps=12 format=3 uid="uid://cfr1jfnc0yb85"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c1047s8kvqxau" path="res://scenes/board/board.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://dj82530aq50v" path="res://assets/images/arrow.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://bhhfdxyfocgox" path="res://scenes/pawn/pawn.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://oej7rrs5jktd" path="res://assets/images/br.webp" id="5"]
+[ext_resource type="Texture2D" uid="uid://buq1yty76w3fj" path="res://assets/images/fr.jpg" id="6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ojqn"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 10.0
+bg_color = Color(0.973535, 0.973535, 0.973535, 1)
+skew = Vector2(0.275, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.0699901, 0.440381, 0.325467, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awo08"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.952941, 0.952941, 0.952941, 0.227451)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_midye"]
+content_margin_left = 40.0
+content_margin_top = 40.0
+content_margin_right = 40.0
+content_margin_bottom = 40.0
+bg_color = Color(0.39197, 0.373287, 0.370809, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.178663, 0.242617, 0.418066, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1418p"]
+content_margin_left = 40.0
+content_margin_top = 40.0
+content_margin_right = 40.0
+content_margin_bottom = 40.0
+bg_color = Color(0.69564, 0.862822, 0.626853, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.178663, 0.242617, 0.418066, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui0rg"]
+content_margin_left = 40.0
+content_margin_top = 40.0
+content_margin_right = 40.0
+content_margin_bottom = 40.0
+bg_color = Color(0.545158, 0.435666, 0.254375, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.178663, 0.242617, 0.418066, 1)
+
+[node name="Main" type="Node"]
+script = ExtResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.980392, 0.862745, 0.658824, 1)
+
+[node name="Board" parent="." instance=ExtResource("2")]
+unique_name_in_owner = true
+
+[node name="Arrow" type="Sprite2D" parent="Board"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(386, 383)
+texture = ExtResource("3")
+
+[node name="Pawn" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(393, 150)
+texture = ExtResource("5")
+type = 2
+active = false
+coords = Vector2i(1, 0)
+s_coords = Vector2i(1, 0)
+
+[node name="Pawn2" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(131, 150)
+texture = ExtResource("6")
+type = 1
+active = false
+
+[node name="Pawn3" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(469, 355)
+texture = ExtResource("6")
+type = 1
+active = false
+coords = Vector2i(1, 1)
+s_coords = Vector2i(1, 1)
+
+[node name="Pawn4" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(579, 355)
+texture = ExtResource("6")
+type = 1
+active = false
+coords = Vector2i(1, 1)
+s_coords = Vector2i(1, 1)
+
+[node name="Pawn5" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(469, 395)
+texture = ExtResource("6")
+type = 1
+active = false
+coords = Vector2i(1, 1)
+s_coords = Vector2i(1, 1)
+
+[node name="Pawn6" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(600, 580)
+texture = ExtResource("6")
+type = 1
+active = false
+coords = Vector2i(2, 2)
+s_coords = Vector2i(2, 2)
+
+[node name="Pawn7" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(710, 580)
+texture = ExtResource("6")
+type = 1
+active = false
+coords = Vector2i(2, 2)
+s_coords = Vector2i(2, 2)
+
+[node name="Pawn8" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(600, 620)
+texture = ExtResource("6")
+type = 1
+active = false
+coords = Vector2i(2, 2)
+s_coords = Vector2i(2, 2)
+
+[node name="Pawn9" parent="Board" instance=ExtResource("4")]
+position = Vector2(731, 355)
+coords = Vector2i(2, 1)
+s_active = true
+s_coords = Vector2i(2, 1)
+
+[node name="Pawn10" parent="Board" instance=ExtResource("4")]
+position = Vector2(841, 355)
+coords = Vector2i(2, 1)
+s_active = true
+s_coords = Vector2i(2, 1)
+
+[node name="Pawn11" parent="Board" instance=ExtResource("4")]
+position = Vector2(600, 110)
+coords = Vector2i(2, 0)
+s_active = true
+s_coords = Vector2i(2, 0)
+
+[node name="Pawn12" parent="Board" instance=ExtResource("4")]
+position = Vector2(710, 110)
+coords = Vector2i(2, 0)
+s_active = true
+s_coords = Vector2i(2, 0)
+
+[node name="Pawn13" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(600, 150)
+active = false
+coords = Vector2i(2, 0)
+s_coords = Vector2i(2, 0)
+
+[node name="Pawn14" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(710, 150)
+active = false
+coords = Vector2i(2, 0)
+s_coords = Vector2i(2, 0)
+
+[node name="Pawn16" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(600, 190)
+active = false
+coords = Vector2i(2, 0)
+s_coords = Vector2i(2, 0)
+
+[node name="Pawn15" parent="Board" instance=ExtResource("4")]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 1)
+position = Vector2(731, 395)
+active = false
+coords = Vector2i(2, 1)
+s_coords = Vector2i(2, 1)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ScorePanel" type="PanelContainer" parent="HUD"]
+offset_left = 54.0
+offset_top = 798.0
+offset_right = 479.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6ojqn")
+
+[node name="VBoxContainer" type="GridContainer" parent="HUD/ScorePanel"]
+layout_mode = 2
+columns = 2
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="HUD/ScorePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "GERMAN:  "
+
+[node name="GermainScore" type="Label" parent="HUD/ScorePanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0
+"
+
+[node name="Label2" type="Label" parent="HUD/ScorePanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "ALLIES: "
+
+[node name="AlliesScore" type="Label" parent="HUD/ScorePanel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="Date" type="Label" parent="HUD"]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -715.0
+offset_top = -234.0
+offset_right = -29.0
+offset_bottom = -165.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+
+[node name="HintPanel" type="HBoxContainer" parent="HUD"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -826.0
+offset_top = 16.0
+offset_right = 826.0
+offset_bottom = 66.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 35
+
+[node name="HintLabel" type="RichTextLabel" parent="HUD/HintPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_awo08")
+bbcode_enabled = true
+text = "asdasdasdasd"
+
+[node name="SkipBtn" type="Button" parent="HUD/HintPanel"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "  Cancel/Finsh   "
+
+[node name="Draw" type="Label" parent="HUD"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -21.0
+offset_right = 54.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.975696, 0.966871, 0.966972, 1)
+theme_override_colors/font_outline_color = Color(0.355433, 0.423553, 0.563223, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 196
+theme_override_styles/normal = SubResource("StyleBoxFlat_midye")
+text = "DRAW"
+
+[node name="Victory" type="Label" parent="HUD"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -21.0
+offset_right = 54.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.795808, 0.910673, 7.70092e-07, 1)
+theme_override_colors/font_outline_color = Color(0.355433, 0.423553, 0.563223, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 196
+theme_override_styles/normal = SubResource("StyleBoxFlat_1418p")
+text = "VICTORY!"
+
+[node name="Defeat" type="Label" parent="HUD"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -21.0
+offset_right = 54.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.716083, 0.868246, 0.966973, 1)
+theme_override_colors/font_outline_color = Color(0.355433, 0.423553, 0.563223, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 196
+theme_override_styles/normal = SubResource("StyleBoxFlat_ui0rg")
+text = "Defeat..."
+
+[node name="Faction" type="Label" parent="HUD"]
+unique_name_in_owner = true
+modulate = Color(0.0821783, 0.0306192, 0.0131472, 1)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1738.0
+offset_top = 719.0
+offset_right = -1432.0
+offset_bottom = 895.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "Your Faction:       "
+
+[node name="Waiting" type="Panel" parent="HUD"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="HUD/Waiting"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 186
+text = "Please Waiting...."
+
+[node name="ReturnToTitle" type="Button" parent="HUD"]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -277.5
+offset_top = -261.0
+offset_right = 277.5
+offset_bottom = -144.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 79
+text = "Return to Title"

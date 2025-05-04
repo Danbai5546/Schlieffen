@@ -1,0 +1,226 @@
+[gd_scene load_steps=16 format=4 uid="uid://c1047s8kvqxau"]
+
+[ext_resource type="TileSet" uid="uid://cucd4trjh23t8" path="res://assets/tile_set.tres" id="1_46fdf"]
+[ext_resource type="Script" path="res://scenes/board/board.gd" id="2_rs51u"]
+[ext_resource type="Script" path="res://scripts/block.gd" id="3_aq64t"]
+
+[sub_resource type="Resource" id="Resource_v7i6i"]
+resource_name = "AMIENS"
+script = ExtResource("3_aq64t")
+coords = Vector2i(0, 0)
+faction = 4
+highlight = false
+name = "AMIENS"
+
+[sub_resource type="Resource" id="Resource_nqw6b"]
+resource_name = "PARIS"
+script = ExtResource("3_aq64t")
+coords = Vector2i(-1, 1)
+faction = 0
+highlight = false
+name = "PARIS"
+
+[sub_resource type="Resource" id="Resource_0hjm1"]
+resource_name = "SOSSIONS"
+script = ExtResource("3_aq64t")
+coords = Vector2i(0, 1)
+faction = 0
+highlight = false
+name = "SOSSIONS"
+
+[sub_resource type="Resource" id="Resource_e0v32"]
+resource_name = "SEDAN"
+script = ExtResource("3_aq64t")
+coords = Vector2i(1, 1)
+faction = 4
+highlight = false
+name = "SEDAN"
+
+[sub_resource type="Resource" id="Resource_fntk3"]
+resource_name = "MELUN"
+script = ExtResource("3_aq64t")
+coords = Vector2i(0, 2)
+faction = 0
+highlight = false
+name = "MELUN"
+
+[sub_resource type="Resource" id="Resource_dc7cp"]
+resource_name = "CHALONS"
+script = ExtResource("3_aq64t")
+coords = Vector2i(1, 2)
+faction = 0
+highlight = false
+name = "CHALONS"
+
+[sub_resource type="Resource" id="Resource_0epxl"]
+resource_name = "VERDUN"
+script = ExtResource("3_aq64t")
+coords = Vector2i(2, 2)
+faction = 4
+highlight = false
+name = "VERDUN"
+
+[sub_resource type="Resource" id="Resource_16q63"]
+resource_name = "LUXEMBOURG"
+script = ExtResource("3_aq64t")
+coords = Vector2i(2, 1)
+faction = 2
+highlight = false
+name = "LUXEMBOURG"
+
+[sub_resource type="Resource" id="Resource_fhwwk"]
+resource_name = "LIEGE"
+script = ExtResource("3_aq64t")
+coords = Vector2i(2, 0)
+faction = 2
+highlight = false
+name = "LIEGE"
+
+[sub_resource type="Resource" id="Resource_2gnda"]
+resource_name = "LE CATEAU"
+script = ExtResource("3_aq64t")
+coords = Vector2i(1, 0)
+faction = 4
+highlight = false
+name = "LE CATEAU"
+
+[sub_resource type="Resource" id="Resource_b818m"]
+resource_name = "TROYES"
+script = ExtResource("3_aq64t")
+coords = Vector2i(0, 3)
+faction = 0
+highlight = false
+name = "TROYES"
+
+[sub_resource type="Resource" id="Resource_qnrn8"]
+resource_name = "LANGRES"
+script = ExtResource("3_aq64t")
+coords = Vector2i(1, 3)
+faction = 0
+highlight = false
+name = "LANGRES"
+
+[node name="Board" type="TileMapLayer"]
+position = Vector2(513, 72)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAABAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAABAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAABAACAAEAAAAAAAAAAgACAAAAAAAAAAAAAgABAAAAAAAAAAAABAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAA=")
+tile_set = ExtResource("1_46fdf")
+script = ExtResource("2_rs51u")
+blocks = Array[ExtResource("3_aq64t")]([SubResource("Resource_v7i6i"), SubResource("Resource_nqw6b"), SubResource("Resource_0hjm1"), SubResource("Resource_e0v32"), SubResource("Resource_fntk3"), SubResource("Resource_dc7cp"), SubResource("Resource_0epxl"), SubResource("Resource_16q63"), SubResource("Resource_fhwwk"), SubResource("Resource_2gnda"), SubResource("Resource_b818m"), SubResource("Resource_qnrn8")])
+
+[node name="Labels" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="AMIENS" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 164.0
+offset_right = 179.0
+offset_bottom = 206.0
+text = "AMIENS"
+metadata/_edit_use_anchors_ = true
+
+[node name="LE CATEAU" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 175.0
+offset_right = 474.0
+offset_bottom = 217.0
+text = "LE CATEAU"
+metadata/_edit_use_anchors_ = true
+
+[node name="LIEGE" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 180.0
+offset_right = 675.0
+offset_bottom = 222.0
+text = "LIEGE"
+metadata/_edit_use_anchors_ = true
+
+[node name="PARIS" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = -58.0
+offset_top = 400.0
+offset_right = 25.0
+offset_bottom = 442.0
+text = "PARIS"
+metadata/_edit_use_anchors_ = true
+
+[node name="SOSSIONS" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 411.0
+offset_right = 338.0
+offset_bottom = 453.0
+text = "SOSSIONS"
+metadata/_edit_use_anchors_ = true
+
+[node name="SEDAN" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 409.0
+offset_right = 577.0
+offset_bottom = 451.0
+text = "SEDAN"
+metadata/_edit_use_anchors_ = true
+
+[node name="LUXEMBOURG" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 400.0
+offset_right = 892.0
+offset_bottom = 442.0
+text = "LUXEMBOURG"
+metadata/_edit_use_anchors_ = true
+
+[node name="MELUN" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 642.0
+offset_right = 180.0
+offset_bottom = 684.0
+text = "MELUN"
+metadata/_edit_use_anchors_ = true
+
+[node name="CHALONS" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 644.0
+offset_right = 448.0
+offset_bottom = 686.0
+text = "CHALONS"
+metadata/_edit_use_anchors_ = true
+
+[node name="VERDUN" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 645.0
+offset_right = 713.0
+offset_bottom = 687.0
+text = "VERDUN"
+metadata/_edit_use_anchors_ = true
+
+[node name="TROYES" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 876.0
+offset_right = 319.0
+offset_bottom = 918.0
+text = "TROYES"
+metadata/_edit_use_anchors_ = true
+
+[node name="LANGRES" type="Label" parent="Labels"]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 866.0
+offset_right = 586.0
+offset_bottom = 908.0
+text = "LANGRES"
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlb24p1w5pd2a"]
+
+[ext_resource type="Script" path="res://scenes/rules/rules.gd" id="1_0ruwi"]
+
+[node name="Rules" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ruwi")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "SCHLIEFFEN: A Simple Wargame by Professor Philip Sabin
+
+INTRODUCTION
+This two player simulation game models the mobile phase of the 1914 French campaign, from the Allied retreat after the Battle of the Frontiers to the First Battle of the Aisne. Each player has a hex gridded map as shown overleaf. Each hex contains a named town or city, and represents an area 100 km across. Players sit opposite one another with a screen between them to hide the other player's map. Each player has 8 coloured blocks, with each block representing around 3 corps of troops. German blocks are green, French blocks are blue, and the British block is red. Each block always occupies a specific hex. Blocks may be fresh (stood on edge) or spent (laid flat). The initial locations and status of the blocks are shown overleaf (fresh blocks in capitals, spent blocks in lower case). Each player's map shows his or her own armies, but enemy front line hexes are recorded only by small coloured markers of the appropriate colour. Players must guess at the changing location and status of enemy blocks based on intelligence received.
+
+OUTLINE OF PLAY
+The game is played in 5 turns representing 5 days each, as recorded by a marker on the turn track. Each turn consists of two phases - the Orders Phase and the Combat Phase. After 5 turns, the German player receives 1 point for every hex he or she controls, and for every Allied block routed. One point is deducted for every German block routed. The historical outcome corresponded to a German score of 4, so players can see whether they have done better or worse than in reality. If the Germans capture the Paris hex, the game ends instantly in an overwhelming German victory.
+
+ORDERS PHASE
+This phase starts with each player secretly flipping one or more of his or her spent blocks to fresh status. The number of German, French and British blocks eligible for this is noted on the turn track. Then, each player may secretly march any or all his or her blocks (whether fresh or spent) one hex to an adjacent hex or hexes already in friendly hands. Finally, any FRESH blocks which DID NOT MARCH this turn may secretly be ordered to attack any adjacent enemy-held hex. Records by standing the blocks on the border between the hex they occupy and the hex they are attacking. Different blocks may march into or attack the same or different hexes, as long as they all begin the turn adjacent to their destination hex.
+
+COMBAT PHASE
+This phase starts with the Allied player choosing a hex which he or she is attacking and announcing the location of all the blocks attacking it. The Allies secretly choose one attacking block and make it spent. The German player then announces how many fresh and how many spent blocks (if any) there are in the hex. If TWO OR MORE blocks are attacking the hex, the Germans make one fresh occupying block spent. If possible, this must be a block which had been ordered to attack from the hex that turn; its own attack is thereby cancelled. If a hit occurs and there is no fresh block to absorb it, then ALL spent blocks in the hex are removed permanently and put in the routed box. If the attacked hex is empty or is vacated by a rout, then all the blocks which attacked it (including the spent one) must immediately advance and seize control of it. Otherwise they remain in their initial hexes. The Allied player now chooses another hex he or she is attacking, and that combat is resolved in the same way. Once all Allied attacks (if any) have been resolved, the German player chooses a hex which he or she is attacking, and this combat is resolved in an identical fashion (but with the Germans choosing which attacking block becomes spent and the Allies assigning their own losses). Play continues until all attacks have been resolved. The Allied player must announce the identity of the British block in an attack or defence, but not whether it becomes spent in that combat.
+
+[img]res://assets/images/rules_img.png[/img]"
+
+[node name="BackBtn" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 42.0
+offset_top = 27.0
+offset_right = 119.0
+offset_bottom = 77.0
+text = "BACK"
